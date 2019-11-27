@@ -44,8 +44,29 @@
         android:id="@+id/et_dummy"
         android:textSize="22sp"
         android:padding="8dp"
+        android:focusedByDefault="false"
         android:alpha="0"
         app:layout_constraintTop_toBottomOf="@id/btn_start"
         app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:id="@+id/view"
+        android:background="#000"
+        app:layout_constraintTop_toBottomOf="@id/et_dummy"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_multiple_animation"
+        android:text="Multiple Animation"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:layout_marginTop="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

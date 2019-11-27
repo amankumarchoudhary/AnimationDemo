@@ -19,7 +19,7 @@ class AnimatorSetActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_animator_set)
 
-        val SEARCH_ANIMATION_DURATION = 5000L
+        val SEARCH_ANIMATION_DURATION = 3000L
 
         btn_start.setOnClickListener {
 
@@ -94,5 +94,20 @@ class AnimatorSetActivity : AppCompatActivity() {
                 }
             })
         }
+
+
+//        btn_multiple_animation.animate().rotation(360f).y(1000f).duration=2000L
+
+        val rotationObjectAnimator:ObjectAnimator= ObjectAnimator
+            .ofFloat(btn_multiple_animation,"rotation",360f)
+        rotationObjectAnimator.duration=2000L
+
+        val translationObjectAnimator:ObjectAnimator= ObjectAnimator
+            .ofFloat(btn_multiple_animation,"translationY",500f)
+        translationObjectAnimator.duration=2000L
+
+        val animatorSet=AnimatorSet()
+        animatorSet.playTogether(rotationObjectAnimator,translationObjectAnimator)
+        animatorSet.start()
     }
 }
