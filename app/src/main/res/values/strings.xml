@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AnimationDemo</string>
+    <string name="title_activity_circular_reveal">CircularRevealActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
